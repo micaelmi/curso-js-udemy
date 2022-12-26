@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <title>JavaScript básico</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/icon.png" alt="Logo do JavaScript" />
+      <h1>JavaScript básico</h1>
+    </header>
+    <section>
+      <h2>Tipos de mensagem do navegador</h2>
+      <pre>
+        window.alert() // mensagem <br />
+        <br />
+        window.confirm() // cancelar ou ok<br />
+        const deleteUser = cornfirm('Realmente deseja apagar este usuário?');<br />
+        <br />
+        window.prompt() // alert com um input dentro<br />
+        const age = prompt('Digite sua idade para continuar') // retorna
+        string<br />
+      </pre>
+    </section>
+    <section>
+      <h2>Strings</h2>
+      <pre>
+        let text = "Um texto"; <br />
+        console.log(text[4]); // e<br />
+        console.log(text.charAt(0)); // U<br />
+        console.log(text.concat(' legal')); // Um texto legal<br />
+        console.log(text.indexOf('texto')); // 3<br />
+        console.log(text.indexOf('texto', 4)); // -1 (não encontrou depois da
+        posição 4)<br />
+        console.log(text.lastIndexOf('t')); // 6<br />
+        console.log(text.match(/[a-z]/g)); // ['m', 't', 'e', 'x', 't', 'o']<br />
+        console.log(text.search(/x/)); // 5 (índice) da letra x<br />
+        console.log(text.replace('Um', 'Outro')); // Outro texto<br />
+        console.log(text.length); // 7<br />
+        console.log(text.slice(3, 5)); // tex (recorta um pedaço)<br />
+        console.log(text.slice(-5)); // texto (recorta um pedaço do final pro
+        começo)<br />
+        console.log(text.split('')); // ['U', 'm', ' ', 't', 'e', 'x', 't',
+        'o']<br />
+        console.log(text.toUpperCase()); // UM TEXTO<br />
+        console.log(text.toLowerCase()); // um texto
+      </pre>
+    </section>
+    <section>
+      <h2>Numbers</h2>
+      <pre>
+        let num1 = 102; <br />
+        let num2 = 4.5678<br />
+        <br />
+        console.log(num1.toString() + num2); // 1024.5678<br />
+        console.log(num1.toString(2)); // binário<br />
+        console.log(num2.toFixed(2)); // 4,57<br />
+        console.log(Number.isInteger(num1)); // true<br />
+        console.log(Number.isInteger(num2)); // false<br />
+        <br />
+        let temp = num1 * 5;<br />
+        console.log(Number.isNaN(temp); // true - conta inválida<br />
+      </pre>
+    </section>
+
+    <section>
+      <h2>Math</h2>
+      <pre>
+        let num1 = 9.49;<br />
+        let num2 = Math.floor(num1); // arredonda pra baixo<br />
+        let num3 = Math.ceil(num1); // arredonda pra cima<br />
+        let num4 = Math.round(num1); // arredonda normal<br />
+        <br />
+        console.log(Math.max(2,44,7,6,-2,1,9876)); // mostra o maior número<br />
+        console.log(Math.min(2,44,7,6,-2,1,9876)); // mostra o menor número<br />
+        console.log(Math.random()); // gera número aleatório entre 0 e 1<br />
+        <br />
+        // número inteiro aleatório entre 5 e 10<br />
+        const rand = Math.round(Math.random() * (10 - 5) + 5); <br />
+        <br />
+        console.log(Math.PI); // número PI<br />
+        console.log(169 ** (1/2)); // raiz quadrada de 169<br />
+      </pre>
+    </section>
+
+    <section>
+      <h2>Arrays</h2>
+      <pre>
+        const students = ['Jenna', 'Emma', 'Elizabeth'] <br>
+        <br>
+        students[1] = 'Alex' // altera posição 1 <br>
+        students[students.length] = 'Clair' // adiciona no final <br>
+        students.push('Sofia') // adiciona no final <br>
+        students.unshift('Kat') // adiciona no começo <br>
+        <br>
+        students.pop() // remove o último <br>
+        students.shift() // remove o primeiro <br>
+        delete students[2] // deixa essa posição com o valor undefined (empty) <br>
+        <br>
+        students.slice(0, -1) // recorta o último elemento br 
+        students.slice(0, 3) // recorta os três primeiros elementos <br>
+        <br>
+        console.log(students instanceof Array) // testa se é um Array <br>
+      </pre>
+    </section>
+  </body>
+</html>

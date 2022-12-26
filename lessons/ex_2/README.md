@@ -1,6 +1,6 @@
-## Exercícios para praticar manipulação de numbers
+# Exercícios para praticar manipulação de numbers
 
-# resultado
+## Resultado
 
 O número escolhido é: 256
 Raiz quadrada: 16

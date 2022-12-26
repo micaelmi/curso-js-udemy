@@ -1,6 +1,6 @@
-## Exercícios para praticar manipulação de strings
+# Exercícios para praticar manipulação de strings
 
-# resultado
+## Resultado
 
 Olá, Micael Miranda!
 Seu nome tem 14 letras

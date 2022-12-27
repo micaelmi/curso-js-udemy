@@ -107,5 +107,61 @@
         console.log(students instanceof Array) // testa se é um Array <br>
       </pre>
     </section>
+
+    <section>
+      <h2>Functions</h2>
+      <pre>
+        function greeting(name) { <br>
+          // console.log(`Hello ${name}!`) <br>
+          return `Hello ${name}!` <br>
+        } <br>
+        const hello = greeting('Micael'); <br>
+        console.log(hello); <br>
+        <br>
+        function sum(x = 0, y = 0) { <br>
+          const result = x + y; <br>
+          return result; <br>
+        } <br>
+        console.log(sum(44,6)); <br>
+        <br>
+        const sqrt = function (x) { <br>
+          return x ** 0.5; <br>
+        } <br>
+        console.log(sqrt()); <br>
+        <br>
+        // arrow function
+        const sqrt = (x) => x ** 0.5; <br>
+      </pre>
+    </section>
+
+    <section>
+      <h2>Objects</h2>
+      <pre>
+        const person = { <br>
+          name: 'John', <br>
+          lastname: 'Doe', <br>
+          age: 28, <br>
+        }; <br>
+        console.log(person.name); <br>
+        <br>
+        function createPerson(name, lastname, age) { <br>
+          return { <br>
+            name, <br>
+            lastname, <br>
+            age, <br>
+            speak() { <br>
+              console.log(`Hello, I'm ${this.name}! My age is ${this.age}`); <br>
+            }, <br>
+            ageIncrement() { <br>
+              this.age++; <br>
+            } <br>
+          } <br>
+        } <br>
+        const person2 = createPerson('Micael', 'Miranda', 18); <br>
+        person2.speak(); <br>
+        person2.ageIncrement(); <br>
+        person2.speak(); <br>
+      </pre>
+    </section>
   </body>
 </html>

@@ -1,0 +1,28 @@
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+section,
+header {
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #222;
+  font-weight: bold;
+}

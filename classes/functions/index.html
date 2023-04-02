@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <title>Funções Avançadas JavaScript</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/icon.png" alt="Logo do JavaScript" />
+      <h1>Funções Avançadas JavaScript</h1>
+    </header>
+    <section>
+      <h2>Declarações</h2>
+      <pre>
+        const normalFunction() { <br>
+          console.log('oi'); <br>
+        }
+        <br>
+        <br>
+        const functionExpression = function() { <br>
+          console.log('oi'); <br>
+        } <br>
+        functionExpression(); <br>
+        <br>
+        const arrowFunction = () => { <br>
+          console.log('oi'); <br>
+        } <br>
+        arrowFunction(); <br>
+        <br>
+        const object = { <br>
+          speak() { <br>
+            console.log('oi'); <br>
+          } <br>
+        } <br>
+        object.speak(); <br>
+      </pre>
+    </section>
+    <section>
+      <h2>Parâmetros</h2>
+      <pre>
+        function newFunction() { <br>
+          let total = 0; <br>
+          for (let argument of arguments) { <br>
+            total += argument; <br>
+          } <br>
+          console.log(total); <br>
+        } <br>
+        newFunction('Valor', 'Micael', 1, 2, 3); <br>
+        <br>
+        function sum (a = 0, b = 2) { <br>
+          console.log(a+b); <br>
+        } <br>
+        sum(2); <br>
+        sum(3,3); <br>
+        sum(undefined,4); <br>
+        <br>
+        function calc(operator, acumulation, ...numbers) { <br>
+          for (let number of numbers) { <br>
+            if(operator === '+') acumulation += number; <br>
+            // ... outras operacoes <br>
+          } <br>
+          console.log(acumulation); <br>
+        } <br>
+        calc('+', 0, 20, 55, 76, 32, 11); <br>
+      </pre>
+    </section>
+    <section>
+      <h2>Retornos da função</h2>
+      <pre>
+        function soma(a, b) { <br>
+          return a+b; <br>
+        } <br>
+        console.log(soma(1, 2)); <br>
+        <br>
+        function newPerson(name, lastname) { <br>
+          return { name, lastname}; <br>
+        } <br>
+        const p1 = newPerson('Micael', 'Inacio'); <br>
+        console.log(p1); <br>
+        <br>
+        function showPhrase(start) { <br>
+          function showRest(end) { <br>
+            return start + ' ' + end; <br>
+          } <br>
+          return showRest; <br>
+        } <br>
+        const speak = showPhrase('Hello'); <br>
+        const rest = speak(' world'); <br>
+        console.log(rest); <br>
+      </pre>
+    </section>
+  </body>
+</html>
